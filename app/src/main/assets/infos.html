@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+
+    <script type="text/javascript">
+    <!--调用js方法-->
+	function test(){
+	 <!--获取用户名和密码-->
+	var name = document.getElementById('username').value;
+	var pwd = document.getElementById('password').value;
+	 <!--js调用android方法 传参-->
+	android.toastMessage(name,pwd)
+	
+		<!--alert("用户名："+name+",密码:"+pwd);-->
+
+	}
+	<!--android调用 js方法 传参-->
+	function test1(){
+document.getElementsByTagName('img')[0].src='b.jpg'
+
+	}
+
+
+
+    </script>
+</head>
+
+<body>
+
+<img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=748880375,2384059604&fm=27&gp=0.jpg" id="img" onclick="test()"/><br/>
+这是一个登录页面<br/>
+	<form   >
+		   用户名<input  id ="username" name="name" type="text"/><br/>
+		密码<input id= "password" name="pwd" type="password"/><br/>
+		<input type="button"  value="提交" onclick="test()">		
+		</form>
+		
+ 
+</body>
+</html>
